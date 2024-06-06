@@ -1,7 +1,7 @@
 *{
         margin: 0;
         padding: 0;
-        font-family: sans-serif;
+        font-family: "Roboto" , sans-serif;
         box-sizing: border-box;
 }
 body{
@@ -39,7 +39,13 @@ nav button{
     border-radius: 4px;
     margin-left: 10px;
     cursor: pointer;
+    transition: background 0.3s;
 }
+
+nav button:hover{
+    background: #b80001; /* Slightly darker on hover */
+}
+
 .Language-btn{
     display: inline-flex;
     align-items: center;
@@ -96,6 +102,7 @@ nav button{
     outline: 0;
     font-size: 16px;
     margin-left: 20px;
+    padding: 10px;
 }
 
 .Email-signup button{
@@ -106,13 +113,19 @@ nav button{
     font-size: 16px;
     cursor: pointer;
     padding: 15px 23px;
+    transition: background 0.3s;
 }
+
+.Email-signup button:hover{
+    background: #b80001; /* Slightly darker on hover */
+}
+
 
 /* *****************************Plan cost**************************** */
 
 .plans{
     margin: 2rem 8rem;
-    
+    color: #fff;    
 }
 .plan-title{
     font-size: 1.5rem;
@@ -120,15 +133,19 @@ nav button{
 }
 .plan-cost{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .card{
     margin: 1rem;
     padding: 1rem;
     background-color: #6e0f3f;
+    background: linear-gradient(-45deg, #ef8d41, #620a56);
     border-radius: 1rem;
     height: 250px;
     width: 280px;
     text-align: left;
+    color: white;
 }
 .category{
     font-size: 24px;
@@ -155,12 +172,27 @@ nav button{
     width: 1220px;
     height: 350px;
 }
-/* .photo{
-    display: block;
-    height: 19rem;
-    width: 7rem;
-} */
 
+.text {
+    display: flex;
+}
+.photo{
+    display: block;
+    height: 2rem;
+    width: 7rem;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.photo img {
+    width: 100%; /* Ensure the image fits within the .photo container */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transition for transform and opacity */
+}
+
+.photo:hover img {
+    transform: scale(1.1); /* Zoom effect */
+    opacity: 0.8; /* Fade effect */
+}
 /* ******************************Reason****************************** */
 
 .purple-card{
